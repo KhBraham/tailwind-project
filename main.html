@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="size-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjeXpret</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="size-full bg-slate-100 relative">
+    <div class="bg-slate-200 bg-opacity-50 z-0 absolute size-full inset-0 rounded-tr-full -translate-x-1/3"></div>
+    <div class="flex flex-col size-full z-10 relative overflow-auto">
+        <nav class="flex justify-between items-center gap-20 sm:gap-x-10 p-4  bg-slate-200">
+            <div class="flex gap-4">
+                <button class="sm:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 464.205 464.205" style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-8 h-8"><g><path d="M435.192 406.18H29.013C12.989 406.18 0 393.19 0 377.167s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.99 29.013 29.013-.001 16.023-12.99 29.013-29.014 29.013zM435.192 261.115H29.013C12.989 261.115 0 248.126 0 232.103s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.989 29.013 29.013s-12.99 29.012-29.014 29.012zM435.192 116.051H29.013C12.989 116.051 0 103.062 0 87.038s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.989 29.013 29.013s-12.99 29.013-29.014 29.013z" fill="#000000" opacity="1" data-original="#000000" class=""></path></g></svg>
+                </button>
+                <h2 class="text-xl font-bold">
+                    ProjeXpret
+                </h2>
+            </div>
+            <div class="bg-slate-50 gap-2 border-gray-800 border flex justify-start grow max-w-screen-md items-center h-full rounded-full p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                <input type="text" placeholder="Rechercher ..." class="bg-slate-50 focus:outline-none">
+            </div>
+            <div class="flex gap-2">
+                <button title="add" class="bg-blue-700 w-10 h-10 rounded-full flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-6 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>  
+                </button>
+                <button class="notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 text-slate-800">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+                </button>
+                <button class="rounded-full overflow-hidden">
+                    <img src="https://picsum.photos/200" alt="image" class="size-11">
+                </button>
+            </div>
+        </nav>
+        <div class="flex grow">
+            <div class="bg-slate-50 w-96 border-x-4-slate-500 hidden sm:block flex flex-col items-center gap-3 p-5 ">
+                <button class="flex gap-2 bg-slate-300 justify-start items-center px-4 py-2 rounded-md w-full">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 511 511.998" style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-6 h-6"><g><path d="M501.426 238.11 419.203 197l82.223-41.113c14.707-7.352 14.722-28.414 0-35.778l-236-118a20.022 20.022 0 0 0-17.89 0l-236 118c-14.708 7.356-14.723 28.418 0 35.778L93.757 197l-82.223 41.11c-14.707 7.355-14.722 28.413 0 35.777L93.758 315l-82.223 41.11c-14.707 7.355-14.722 28.413 0 35.777l236 118a20.01 20.01 0 0 0 17.89 0l236-118c14.708-7.356 14.723-28.414 0-35.778L419.204 315l82.223-41.113c14.707-7.352 14.722-28.414 0-35.778zM256.48 42.36 447.758 138 256.48 233.637 65.203 138zM447.758 374 256.48 469.637 65.203 374l73.277-36.64 109.055 54.527a20.01 20.01 0 0 0 17.89 0l109.055-54.528zM256.48 351.637 65.203 256l73.277-36.64 109.055 54.527a20.01 20.01 0 0 0 17.89 0l109.055-54.528L447.758 256zm0 0" fill="#000000" opacity="1" data-original="#000000" class=""></path></g></svg>
+                    </div>
+                    <div class="">
+                        <p class="text-xl font-bold ">Projets</p>
+                    </div>
+                </button>
+                <button class="flex gap-2 justify-start items-center px-4 py-2 rounded-md w-full">
+                    <div>
+                        <img src="   https://cdn-icons-png.flaticon.com/512/953/953810.png " width="20" height="20"  alt="" title="" class="img-small">
+                    </div>
+                    <div class="">
+                        <p class="text-xl text-slate-600 font-bold ">Messages</p>
+                    </div>
+                </button>
+                <button class="flex gap-2 justify-start items-center px-4 py-2 rounded-md w-full">
+                    <div>
+                        <img src="   https://cdn-icons-png.flaticon.com/512/1738/1738780.png " width="20" height="20" alt="" title="" class="img-small">
+                    </div>
+                    <div class="">
+                        <p class="text-xl text-slate-600 font-bold ">Paramètres</p>
+                    </div>
+                </button>
+            </div>
+            <div class="grow grid gap-4 h-fit sm:grid-col-1 md:grid-cols-2  lg:grid-cols-3 p-4">
+                <article class="bg-orange-200  flex flex-row sm:flex-col justify-center items-center sm:justify-start rounded-3xl overflow-hidden">
+                    
+                    <img src="https://picsum.photos/200" alt="" class="block w-full h-full sm:h-32 sm:object-cover">
+                    
+                    <div class="flex p-4 gap-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold">FitMind: Mental Wellness Tracker</h3>
+                            <p class="text-xs">
+                                FitMind is an app that helps users track their mental health through mood journaling,
+                                <span class="text-blue-500">voir plus...</span>
+                            </h3>
+                        </div>
+                        <div class="gap-3 flex flex-col items-center justify-center">
+                            <div>
+                                <svg class="w-20 h-20" viewBox="0 0 40 40">
+                                    <!-- Background circle -->
+                                    <circle
+                                        class="text-slate-300"
+                                        stroke="currentColor"
+                                        stroke-width="6"
+                                        fill="none"
+                                        cx="20"
+                                        cy="20"
+                                        r="16"
+                                    />
+                                    <!-- Foreground circle (for percentage) -->
+                                    <circle
+                                        class="text-orange-500"
+                                        stroke="currentColor"
+                                        stroke-width="6"
+                                        stroke-dasharray="75, 100"
+                                        fill="none"
+                                        cx="20"
+                                        cy="20"
+                                        r="16"
+                                    />
+                                </svg>
+                            </div>
+                            <button class="p-2 bg-slate-300 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-orange-200  flex flex-row sm:flex-col justify-center items-center sm:justify-start rounded-3xl overflow-hidden">
+                    
+                    <img src="https://picsum.photos/200" alt="" class="block w-full sm:h-32 sm:object-cover">
+                
+                <div class="flex p-4 gap-4">
+                    <div class="space-y-2">
+                        <h3 class="text-lg font-bold">FitMind: Mental Wellness Tracker</h3>
+                        <p class="text-xs">
+                            FitMind is an app that helps users track their mental health through mood journaling,
+                            <span class="text-blue-500">voir plus...</span>
+                        </h3>
+                    </div>
+                    <div class="gap-3 flex flex-col items-center justify-center">
+                        <div>
+                            <svg class="w-20 h-20" viewBox="0 0 40 40">
+                                <!-- Background circle -->
+                                <circle
+                                    class="text-slate-300"
+                                    stroke="currentColor"
+                                    stroke-width="6"
+                                    fill="none"
+                                    cx="20"
+                                    cy="20"
+                                    r="16"
+                                />
+                                <!-- Foreground circle (for percentage) -->
+                                <circle
+                                    class="text-orange-500"
+                                    stroke="currentColor"
+                                    stroke-width="6"
+                                    stroke-dasharray="75, 100"
+                                    fill="none"
+                                    cx="20"
+                                    cy="20"
+                                    r="16"
+                                />
+                            </svg>
+                        </div>
+                        <button class="p-2 bg-slate-300 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="bg-orange-200  flex flex-row sm:flex-col justify-center items-center sm:justify-start rounded-3xl overflow-hidden">
+                    
+                        <img src="https://picsum.photos/200" alt="" class="block w-full sm:h-32 sm:object-cover">
+                    
+                    <div class="flex p-4 gap-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold">FitMind: Mental Wellness Tracker</h3>
+                            <p class="text-xs">
+                                FitMind is an app that helps users track their mental health through mood journaling,
+                                <span class="text-blue-500">voir plus...</span>
+                            </h3>
+                        </div>
+                        <div class="gap-3 flex flex-col items-center justify-center">
+                            <div>
+                                <svg class="w-20 h-20" viewBox="0 0 40 40">
+                                    <!-- Background circle -->
+                                    <circle
+                                        class="text-slate-300"
+                                        stroke="currentColor"
+                                        stroke-width="6"
+                                        fill="none"
+                                        cx="20"
+                                        cy="20"
+                                        r="16"
+                                    />
+                                    <!-- Foreground circle (for percentage) -->
+                                    <circle
+                                        class="text-orange-500"
+                                        stroke="currentColor"
+                                        stroke-width="6"
+                                        stroke-dasharray="75, 100"
+                                        fill="none"
+                                        cx="20"
+                                        cy="20"
+                                        r="16"
+                                    />
+                                </svg>
+                            </div>
+                            <button class="p-2 bg-slate-300 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-orange-200  flex flex-row sm:flex-col justify-center items-center sm:justify-start rounded-3xl overflow-hidden">
+                    
+                        <img src="https://picsum.photos/200" alt="" class="block w-full sm:h-32 sm:object-cover">
+                    
+                    <div class="flex p-4 gap-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold">FitMind: Mental Wellness Tracker</h3>
+                            <p class="text-xs">
+                                FitMind is an app that helps users track their mental health through mood journaling,
+                                <span class="text-blue-500">voir plus...</span>
+                            </h3>
+                        </div>
+                        <div class="gap-3 flex flex-col items-center justify-center">
+                            <div>
+                                <svg class="w-20 h-20" viewBox="0 0 40 40">
+                                    <!-- Background circle -->
+                                    <circle
+                                        class="text-slate-300"
+                                        stroke="currentColor"
+                                        stroke-width="6"
+                                        fill="none"
+                                        cx="20"
+                                        cy="20"
+                                        r="16"
+                                    />
+                                    <!-- Foreground circle (for percentage) -->
+                                    <circle
+                                        class="text-orange-500"
+                                        stroke="currentColor"
+                                        stroke-width="6"
+                                        stroke-dasharray="75, 100"
+                                        fill="none"
+                                        cx="20"
+                                        cy="20"
+                                        r="16"
+                                    />
+                                </svg>
+                            </div>
+                            <button class="p-2 bg-slate-300 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-orange-200  flex flex-row sm:flex-col justify-center items-center sm:justify-start rounded-3xl overflow-hidden">
+                    
+                        <img src="https://picsum.photos/200" alt="" class="block w-full sm:h-32 sm:object-cover">
+                    
+                    <div class="flex p-4 gap-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold">FitMind: Mental Wellness Tracker</h3>
+                            <p class="text-xs">
+                                FitMind is an app that helps users track their mental health through mood journaling,
+                                <span class="text-blue-500">voir plus...</span>
+                            </h3>
+                        </div>
+                        <div class="gap-3 flex flex-col items-center justify-center">
+                            <div>
+                                <svg class="w-20 h-20" viewBox="0 0 40 40">
+                                    <!-- Background circle -->
+                                    <circle
+                                        class="text-slate-300"
+                                        stroke="currentColor"
+                                        stroke-width="6"
+                                        fill="none"
+                                        cx="20"
+                                        cy="20"
+                                        r="16"
+                                    />
+                                    <!-- Foreground circle (for percentage) -->
+                                    <circle
+                                        class="text-orange-500"
+                                        stroke="currentColor"
+                                        stroke-width="6"
+                                        stroke-dasharray="75, 100"
+                                        fill="none"
+                                        cx="20"
+                                        cy="20"
+                                        r="16"
+                                    />
+                                </svg>
+                            </div>
+                            <button class="p-2 bg-slate-300 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
